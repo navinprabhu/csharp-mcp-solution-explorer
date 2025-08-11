@@ -5,7 +5,12 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:devblogs.microsoft.com)",
       "Bash(dotnet new:*)",
-      "Bash(git init:*)"
+      "Bash(git init:*)",
+      "Bash(gh repo create:*)",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)"
     ],
     "deny": []
   }
