@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "csharp-solution-explorer": {
+      "type": "stdio",
+      "command": "dotnet",
+      "args": ["run", "--project", "C:\\Users\\User\\dev\\mcptest\\CSharpSolutionExplorer.csproj"]
+    }
+  }
+}
