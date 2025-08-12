@@ -1,17 +1,11 @@
 using System.ComponentModel;
 using System.Text.Json;
-using ModelContextProtocol.Attributes;
 
 namespace CSharpSolutionExplorer;
 
-[McpServerToolType]
 public static class SolutionExplorerTools
 {
-    [McpServerTool]
-    [Description("Lists all .csproj and .sln files in a directory")]
-    public static async Task<string> ListCSharpProjects(
-        [Description("Directory path to search (default: current directory)")]
-        string path = ".")
+    public static async Task<string> ListCSharpProjects(string path = ".")
     {
         try
         {
@@ -44,11 +38,7 @@ public static class SolutionExplorerTools
         }
     }
 
-    [McpServerTool]
-    [Description("Analyzes a C# project file and shows its dependencies and properties")]
-    public static async Task<string> AnalyzeProject(
-        [Description("Path to the .csproj file")]
-        string projectPath)
+    public static async Task<string> AnalyzeProject(string projectPath)
     {
         try
         {
@@ -82,13 +72,7 @@ public static class SolutionExplorerTools
         }
     }
 
-    [McpServerTool]
-    [Description("Searches for C# classes, interfaces, or methods in .cs files")]
-    public static async Task<string> SearchCSharpCode(
-        [Description("Directory path to search")]
-        string path,
-        [Description("Search term (class name, method name, etc.)")]
-        string searchTerm)
+    public static async Task<string> SearchCSharpCode(string path, string searchTerm)
     {
         try
         {
